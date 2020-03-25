@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavTopComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    console.log('this is nav component');
+  }
 
   ngOnInit(): void {
   }

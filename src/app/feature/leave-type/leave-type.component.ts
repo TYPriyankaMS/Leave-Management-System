@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeaveTypeComponent implements OnInit {
 
-  constructor() { }
+  constructor() { console.log('this is leavetype');}
 
   ngOnInit(): void {
   }
