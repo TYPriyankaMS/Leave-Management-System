@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeaveStatusComponent implements OnInit {
 
-  constructor() { }
+  constructor() { console.log('this is leavestatus'); }
 
   ngOnInit(): void {
   }
