@@ -1,0 +1,134 @@
+<div class="col-md-4 ml-4" style="float:left;margin-right: 95px;">
+    <div class="card mt-5 mb-3">
+        <div class="card-header">
+            <h3>Leave-Request Form</h3>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="leaveForm">
+                <div class="form-group">
+                    <label for="leave-type">Leave-type:</label>
+                    <select class="form-control" id="exampleFormControlSelect2">
+                        <option>select</option>
+                        <option>Comp off</option>
+                        <option>WFH</option>
+                        <option>Maternity leave</option>
+                        <option>Sick leave</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="leave-for">Leave-for:</label>
+                    <div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="defaultInline1">
+                            <label class="custom-control-label" for="defaultInline1">First-Half</label>
+                        </div>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" class="custom-control-input" id="defaultInline2">
+                            <label class="custom-control-label" for="defaultInline2">Second-Half</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group cal-icon">
+                    <label for="from-date">From-Date:</label>
+                    <!--<input type="text" id="from-date" name="fromdate" class="form-control" bsDatepicker> -->
+                    <input type="text" class="form-control" formControlName="fromDate" [minDate]="minDate" bsDatepicker [bsValue]="bsValue" [bsConfig]="datePickerConfig" [ngClass]="{ 'is-invalid': submitted && f.fromDate.errors }" />
+                    <i class="fas fa-calendar-alt fa-lg"></i>
+                </div>
+                <div class="form-group cal-icon">
+                    <label for="to-date">To-Date:</label>
+                    <!--<input type="text" id="from-date" name="fromdate" class="form-control" bsDatepicker> -->
+                    <input type="text" class="form-control" formControlName="toDate" [minDate]="minDate" bsDatepicker [bsValue]="bsValue" [bsConfig]="datePickerConfig" [ngClass]="{ 'is-invalid': submitted && f.toDate.errors }" />
+                    <i class="fas fa-calendar-alt fa-lg"></i>
+                </div>
+                <div class="form-group">
+                    <label for="reason">Reason:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                </div>
+                <button type="button" class="btn btn-secondary btn-lg ml-4">Apply</button>
+                <button type="button" class="btn btn-secondary btn-lg ml-4">Reset</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--leave status -->
+
+<div class="leave-status">
+    <h3 id="leave">Leave Status</h3>
+</div>
+<table class="table table-hover table-condensed">
+    <thead>
+        <tr>
+            <th scope="col">Leave Type</th>
+            <th scope="col">OpeningBalance</th>
+            <th scope="col">Credited</th>
+            <th scope="col">Applied</th>
+            <th scope="col">Availed</th>
+            <th scope="col">Pending</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Comp Off</th>
+            <td>1.5</td>
+            <td>2</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1.5</td>
+        </tr>
+        <tr>
+            <th scope="row">Work From Home</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <th scope="row">Maternity Leave</th>
+            <td>1</td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <th scope="row">Sick Leave</th>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </tbody>
+</table>
+
+<!--Apply for Comp Off-->
+<div class="card" id="compOff">
+    <div class="card-header" style="padding: 6px 15px;">
+        <h4>Apply CompOff</h4>
+    </div>
+    <div class="card-body" style="padding: 12px 0;">
+        <form [formGroup]="compOffForm">
+            <div class="form-group cal-icon col-md-6" style="float:left;">
+                <label for="from-date">From Date:</label>
+                <!--<input type="text" id="from-date" name="fromdate" class="form-control" bsDatepicker> -->
+                <input type="text" class="form-control" formControlName="fromDate" [maxDate]="maxDate" bsDatepicker [bsValue]="bsValue" [bsConfig]="datePickerConfig" [ngClass]="{ 'is-invalid': submitted && f1.fromDate.errors }" />
+                <i class="fas fa-calendar-alt fa-lg"></i>
+            </div>
+            <div class="form-group cal-icon col-md-6" style="float:left;">
+                <label for="to-date">To-Date:</label>
+                <!--<input type="text" id="from-date" name="fromdate" class="form-control" bsDatepicker> -->
+                <input type="text" class="form-control" formControlName="toDate" [maxDate]="maxDate" bsDatepicker [bsValue]="bsValue" [bsConfig]="datePickerConfig" [ngClass]="{ 'is-invalid': submitted && f1.toDate.errors }" />
+                <i class="fas fa-calendar-alt fa-lg"></i>
+            </div>
+            <div class="form-group col-md-8" style="float:left;">
+                <label for="reason">Reason:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+            </div>
+            <div class="col-md-4" style="float:left;margin-top:33px;">
+                <button type="button" class="btn btn-secondary btn-lg ml-4" style="float:left;">Apply</button></div>
+        </form>
+
+
+    </div>

@@ -1,0 +1,31 @@
+.cal-icon {
+    position: relative;
+}
+
+.cal-icon i {
+    position: absolute;
+    right: 11px;
+    top: 27px;
+    padding: 15px 9px;
+    transition: .3s;
+}
+
+table {
+    width: 700px;
+    float: right;
+    margin: 1rem 10px 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#leave {
+    margin: 3rem 10px 10px;
+    padding-left: 30px;
+}
+
+#compOff {
+    margin: 300px 10px 10px;
+}

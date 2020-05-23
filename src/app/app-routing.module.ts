@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LeaveStatusComponent } from './feature/leave-status/leave-status.component';
-import { ApplyLeaveComponent } from './feature/apply-leave/apply-leave.component';
-import { LeaveTypeComponent } from './feature/leave-type/leave-type.component';
+import { HomeComponent } from './feature/home/home.component';
+import { LeaveRequestComponent } from './feature/leave-request/leave-request.component';
 
 
 const routes: Routes = [
+
   { path: 'leavestatus', component: LeaveStatusComponent },
-  { path: 'apply-leave', component: ApplyLeaveComponent },
-  { path: 'leaveType', component: LeaveTypeComponent }
+  { path: 'leave-request', component: LeaveRequestComponent },
+  { path: 'home', component: HomeComponent },
+  { path: '**', redirectTo: 'Home' }
 ];
 
 @NgModule({

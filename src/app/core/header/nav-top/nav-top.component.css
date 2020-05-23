@@ -50,13 +50,15 @@ a {
 
 /********drop-down------------------*/
 
+
+/*
 .leavestatus {
     position: absolute;
-    top: 60px;
-    right: 50px;
+    top: 54px;
+    right: 0;
     min-width: 50px;
-    margin-left: 800px;
-    margin-right: 200px;
+    margin-left: 1005px;
+    margin-right: 95px;
     text-align: left;
     border: none;
     -webkit-box-shadow: 0px 4px 26px -19px rgba(0, 0, 0, 0.75);
@@ -76,3 +78,4 @@ a {
 .dropdown>.dropdown-toggle:active {
     pointer-events: none;
 }
+*/
